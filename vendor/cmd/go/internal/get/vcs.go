@@ -982,6 +982,15 @@ var vcsPaths = []*vcsPath{
 		check:  noVCSSuffix,
 	},
 
+	// Github Enterprise Schibsted
+	{
+		prefix: "github.schibsted.io/",
+		re:     `^(?P<root>github\.schibsted\.io/[A-Za-z0-9_.\-]+/[A-Za-z0-9_.\-]+)(/[\p{L}0-9_.\-]+)*$`,
+		vcs:    "git",
+		repo:   "https://{root}",
+		check:  noVCSSuffix,
+	},
+
 	// Bitbucket
 	{
 		prefix: "bitbucket.org/",
